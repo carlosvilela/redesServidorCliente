@@ -16,7 +16,7 @@ chatServidor.listen(30)                                                         
 
 # Função para calcular o valor adicionando 11%
 def elevar (valor):
-    potencia = 2
+    potencia = 2,7182818284590452353602874
     calculo = math.pow(valor,potencia)
     return calculo
 
