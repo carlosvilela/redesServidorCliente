@@ -25,9 +25,9 @@ try:                                                                        # tr
         clienteSocket, enderecoCliente = chatServidor.accept()              # Espera por conexão do cliente
         mensagem = clienteSocket.recv(tamanhoBuffer)                        # recebe a mensagem do Cliente
         mensagem = mensagem.decode("ascii")                                 # converte os bytes na tabela ascii
-        valor = float(mensagem)                                               # converte a string em numero inteiro
-        calc = incorporar(valor)                                               # realiza os calculos
-        mensagem = str(calc).encode("utf-8")                                 # converte o numero inteiro em string
+        valor = float(mensagem)                                             # converte a string em numero inteiro
+        calc = incorporar(valor)                                            # realiza os calculos
+        mensagem = str(calc).encode("utf-8")                                # converte o numero inteiro em string
         clienteSocket.send(mensagem)                                        # retorna a mensagem processada ao cliente
 
 except KeyboardInterrupt:                                                   # caso haja erro irá retornar uma ação

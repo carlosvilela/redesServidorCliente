@@ -13,7 +13,7 @@ chatServidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)                
 chatServidor.bind((hostname, porta))                                            # hostname e porta de acesso
 chatServidor.listen(30)                                                         # numero de Conexões permitidas
 
-# Função para calcular o fatorial de um numero
+# Função para calcular o fatorial de um numero inteiro
 def fatorial (numeroInteiro):
     tamanho = numeroInteiro + 1
     calculo = 1

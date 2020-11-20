@@ -13,7 +13,7 @@ chatServidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)                
 chatServidor.bind((hostname, porta))                                            # hostname e porta de acesso
 chatServidor.listen(30)                                                         # numero de Conexões permitidas
 
-# Função para calcular o valor adicionando 11%
+# Função para calcular o valor extraindo 25%
 def extrair (valor):
     porcentagem = 1 - (25/100)
     calculo = valor*porcentagem
@@ -25,9 +25,9 @@ try:                                                                        # tr
         clienteSocket, enderecoCliente = chatServidor.accept()              # Espera por conexão do cliente
         mensagem = clienteSocket.recv(tamanhoBuffer)                        # recebe a mensagem do Cliente
         mensagem = mensagem.decode("ascii")                                 # converte os bytes na tabela ascii
-        valor = float(mensagem)                                               # converte a string em numero inteiro
+        valor = float(mensagem)                                             # converte a string em numero inteiro
         calc = extrair(valor)                                               # realiza os calculos
-        mensagem = str(calc).encode("utf-8")                                 # converte o numero inteiro em string
+        mensagem = str(calc).encode("utf-8")                                # converte o numero inteiro em string
         clienteSocket.send(mensagem)                                        # retorna a mensagem processada ao cliente
 
 except KeyboardInterrupt:                                                   # caso haja erro irá retornar uma ação
