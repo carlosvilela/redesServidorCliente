@@ -25,9 +25,9 @@ try:                                                                        # tr
     while True:
         mensagem,endCliente = codeServidor.recvfrom(tamanhoBuffer)          # recebe a mensagem do Cliente
         mensagem = mensagem.decode("ascii")                                 # converte os bytes na tabela ascii
-        valor = float(mensagem)                                             # converte a string em numero inteiro
-        calc = fatorial(valor)                                              # realiza os calculos
-        mensagem = str(calc).encode("utf-8")                                # converte o numero inteiro em string
+        valor = int(mensagem)  # converte a string em numero inteiro
+        fat = fatorial(valor)  # realiza os calculos
+        mensagem = str(fat).encode("utf-8")  # converte o numero inteiro em string
         codeServidor.sendto(mensagem,endCliente)                            # retorna a mensagem processada ao cliente
 
 except KeyboardInterrupt:                                                   # caso haja erro irá retornar uma ação
