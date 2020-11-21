@@ -15,7 +15,7 @@ codeCliente.connect((hostname, porta))                                          
 enviar = input("Digite um valor: ")                                             # entrada de dados
 codeCliente.send(enviar.encode())                                               # envio da mensagem
 
-resultado = chatCliente.recv(1048)                                              # recebe a resposta do servidor
+resultado = codeCliente.recv(1048)                                              # recebe a resposta do servidor
 print("O quadrado de ",enviar," é = ",resultado)                                # exibe a resposta do servidor
 
 codeCliente.close()                                                             # finaliza a conexão

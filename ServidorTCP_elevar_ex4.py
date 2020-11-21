@@ -16,8 +16,7 @@ codeServidor.listen(30)                                                         
 
 # Função para calcular o valor elevando a constante neperiana
 def elevar (valor):
-    potencia = 2,7182818284590452353602874
-    calculo = math.pow(valor,potencia)
+    calculo = math.pow(valor,math.e)
     return calculo
 
 # Loop infinito, aguardando requisições
@@ -26,7 +25,7 @@ try:                                                                        # tr
         clienteSocket, enderecoCliente = codeServidor.accept()              # Espera por conexão do cliente
         mensagem = clienteSocket.recv(tamanhoBuffer)                        # recebe a mensagem do Cliente
         mensagem = mensagem.decode("ascii")                                 # converte os bytes na tabela ascii
-        valor = float(mensagem)                                             # converte a string em numero inteiro
+        valor = double(mensagem)                                             # converte a string em numero inteiro
         calc = elevar(valor)                                                # realiza os calculos
         mensagem = str(calc).encode("utf-8")                                # converte o numero inteiro em string
         clienteSocket.send(mensagem)                                        # retorna a mensagem processada ao cliente

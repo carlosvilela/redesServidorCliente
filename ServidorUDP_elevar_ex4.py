@@ -2,6 +2,7 @@
 
 # importando bibliotecas
 import socket
+import math
 
 # Variaveis
 hostname = "localhost"                                                          # endereço local
@@ -14,8 +15,7 @@ codeServidor.bind((hostname, porta))                                            
 
 # Função para calcular o valor elevando a constante neperiana
 def elevar (valor):
-    potencia = 2,7182818284590452353602874
-    calculo = math.pow(valor,potencia)
+    calculo = math.pow(valor,math.e)
     return calculo
 
 # Loop infinito, aguardando requisições
