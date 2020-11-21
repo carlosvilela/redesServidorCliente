@@ -14,8 +14,9 @@ codeCliente.connect((hostname, porta))                                          
 
 enviar = input("Digite um valor: ")                                             # entrada de dados
 codeCliente.send(enviar.encode())                                               # envio da mensagem
-
 resultado = codeCliente.recv(1048)                                              # recebe a resposta do servidor
+resultado = (resultado).decode()                                                # Decodificar resultado
+
 print("O Log base 10 do valor ",enviar," é = ",resultado)                                 # exibe a resposta do servidor
 
 codeCliente.close()                                                             # finaliza a conexão

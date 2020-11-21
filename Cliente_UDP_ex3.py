@@ -13,8 +13,9 @@ codeCliente = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)                  
 
 enviar = input("Digite um valor: ")                                             # entrada de dados
 codeCliente.sendto(enviar.encode(),(hostname,porta))                            # envio da mensagem
-
 resultado,endServidor = codeCliente.recvfrom(1048)                              # recebe a resposta do servidor
+resultado = (resultado).decode()                                                # Decodificar resultado
+
 print("O quadrado de ",enviar," é = ",resultado)                                # exibe a resposta do servidor
 
 codeCliente.close()                                                             # finaliza a conexão
