@@ -6,5 +6,5 @@
 <br>IDE: Pycharm Community
 <br>Dependencias: python3-distutils
 <h3 align="center">Integrantes do Grupo</h1>
-<br>*****************
-<br>*****************
+<br> Carlos Vilela
+<br>Bernardo Bereheavy
