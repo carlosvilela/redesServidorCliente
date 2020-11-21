@@ -7,4 +7,4 @@
 <br>Dependencias: python3-distutils
 <h3 align="center">Integrantes do Grupo</h1>
 <br> Carlos Vilela
-<br>Bernardo Bereheavy
+<br>Bernardo Nascimento
