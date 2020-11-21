@@ -2,6 +2,7 @@
 
 # importando bibliotecas
 import socket
+
 import math
 
 # Variaveis
